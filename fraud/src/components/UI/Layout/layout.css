@@ -63,3 +63,20 @@
   width: 20px;
   height: 20px;
 }
+
+.frontloga {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align items horizontally */
+  border: 2px solid #333;
+  border-radius: 25px;
+  padding: 4px;
+  margin: auto;
+  position: relative;
+}
+
+.frontloga img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; /* Add spacing between image and text */
+}

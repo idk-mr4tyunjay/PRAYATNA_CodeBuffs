@@ -9,6 +9,7 @@
   transform: translatex(0px) translatey(0px);
   padding-bottom: 1px;
   width: 100vw;
+  background-color: #24245b;
 }
 
 .linkWrapper {
@@ -24,7 +25,7 @@
 
 .navLinks {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navLinks:hover {
@@ -67,9 +68,6 @@
   transform: rotate(90deg);
 }
 
-.arrow:hover + #icon {
-  transform: scale(1.2); /* Example transform */
-}
 #icon {
   height: 25px;
   width: 25px;

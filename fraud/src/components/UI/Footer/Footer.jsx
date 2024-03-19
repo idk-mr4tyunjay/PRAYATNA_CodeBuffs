@@ -7,19 +7,19 @@ function Footer() {
     columns: [
       {
         title: "Address",
-        content: "123 Street, City, Country"
+        content: "123 Street, City, Country",
       },
       {
         title: "Phone",
-        content: "+1 234 5678"
+        content: "+1 234 5678",
       },
       {
         title: "Email",
-        content: "info@example.com"
-      }
+        content: "info@example.com",
+      },
     ],
 
-    officeLocation: "Office Location: 456 Avenue, City, Country"
+    officeLocation: "Office Location: 456 Avenue, City, Country",
   };
 
   return (
@@ -35,9 +35,21 @@ function Footer() {
       </div>
       <div className="footer-location">{footerData.officeLocation}</div>
       <div className="footer-social-icons">
-      <img src="\src\assets\facebook (1).png" alt="facebook" className="sicons"/>
-      <img src="\src\assets\instagram.png" alt="insta" className="sicons"/>
-      <img src="\src\assets\twitter_5969020.png" alt="twitter-x" className="sicons" />
+        <img
+          src="\src\assets\icons\facebook.png"
+          alt="facebook"
+          className="sicons"
+        />
+        <img
+          src="\src\assets\icons\instagram.png"
+          alt="insta"
+          className="sicons"
+        />
+        <img
+          src="\src\assets\icons\twitter_5969020.png"
+          alt="twitter-x"
+          className="sicons"
+        />
       </div>
     </footer>
   );

@@ -1,7 +1,8 @@
 import Layout2 from "./Layout2";
 import "./layout.css";
 import Login from "../Login/Login_form";
-
+import Footer from "../Footer/Footer";
+import Demo from "../../API/Demo";
 function Layout() {
   return (
     <div>
@@ -30,6 +31,8 @@ function Layout() {
         <Login />
       </div>
       <Layout2 />
+      <Footer />
+      <Demo/>
     </div>
   );
 }
