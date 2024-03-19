@@ -1,0 +1,91 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  z-index: 1000;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  height: 70px;
+  transform: translatex(0px) translatey(0px);
+  padding-bottom: 1px;
+  width: 100vw;
+}
+
+.linkWrapper {
+  display: flex;
+  font-family: "sans-serif";
+  font-weight: 3px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 700px;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: black;
+}
+
+.navLinks:hover {
+  background-color: #8d8741;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -8px;
+}
+
+.profile-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.options ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.options li:hover {
+  background-color: #f0f0f0;
+}
+.linkWrapper .profile-icon .arrow {
+  width: 20px;
+  height: 20px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+.linkWrapper .profile-icon .arrow:hover {
+  transform: rotate(90deg);
+}
+
+.arrow:hover + #icon {
+  transform: scale(1.2); /* Example transform */
+}
+#icon {
+  height: 25px;
+  width: 25px;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.profile-icon:hover .options {
+  display: block;
+}

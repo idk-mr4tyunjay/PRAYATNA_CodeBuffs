@@ -1,15 +1,16 @@
-import './App.css'
-import Footer from './components/UI/Footer/Footer'
-import Navbar from './components/UI/Navbar/Navbar'
+import "./App.css";
+import Demo from "./components/API/Demo";
+import Footer from "./components/UI/Footer/Footer";
+import Layout from "./components/UI/Layout/Layout";
 
 function App() {
-
   return (
     <>
-      <Navbar />
+      <Layout />
       <Footer />
+      <Demo />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,65 @@
+/* Import Google Fonts */
+@import url("//fonts.googleapis.com/css2?family=Artifika:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("//fonts.googleapis.com/css2?family=Alata:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.layoutwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3a6e;
+}
+
+.layoutMain {
+  background-color: #e8efff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.layoutMain h2 {
+  font-family: "Raginy";
+  text-align: center;
+  font-size: 90px;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  font-family: "Artifika", serif;
+}
+
+.layoutMain p {
+  font-family: "FoundersGrotesk", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  top: -100px;
+  font-family: "Alata", sans-serif;
+  font-weight: lighter;
+}
+
+.frontlog {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: row;
+}
+
+.frontloga {
+  border: 2px solid #333;
+  border-radius: 25px;
+  padding: 4px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.frontloga a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+.frontloga img {
+  width: 20px;
+  height: 20px;
+}

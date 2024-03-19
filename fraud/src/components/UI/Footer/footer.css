@@ -1,0 +1,47 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-social-icons {
+  margin-top: 20px;
+  background-color: white-;
+}
+.sicons {
+  width: 20px;
+  height: 20px;
+  padding: 40px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+  color: #ccc;
+}
