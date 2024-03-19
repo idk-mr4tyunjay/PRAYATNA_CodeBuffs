@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from .serializers import ApiCodeSerializer
 from .forms import CustomUserForm
 from rest_framework.decorators import api_view
+from .models import users_collection
 
 
 def front(request):
@@ -13,19 +14,7 @@ def front(request):
 
 # This is the home page
 def home(request):
-    # ak = "3e9e926f-9dcd-4b1f-9df6-f74365275f1a"
-    # gURL = "http://13.48.136.54:8000/api/api-code/"
-    # headers = {
-    #     "Authorization": f"Bearer {ak}"
-    # }
-    # response = requests.post(gURL, headers=headers)
-
-    # if response.status_code == 200:
-    #     api_code = response.json().get('api_code', "No api code received")
-    # else:
-    #     api_code = "Error in retrieving api code"
-    # context = {"api_code": api_code}
-    return render(request, 'index.html')
+    return render(request, 'base/home.html')
 
 def ApiCodeShow(request):
     ak = "3e9e926f-9dcd-4b1f-9df6-f74365275f1a"
@@ -65,5 +54,39 @@ def register_user(request):
     }
 
     return render(request, 'base/registration.html', context)
+
+
+def register(request):
+    if request.method == 'POST':
+        firstname = request.POST.get('fname')
+        lastname = request.POST.get('lname')
+        username = request.POST.get('username')
+        email = request.POST.get('uemail')
+        pwd1 = request.POST.get('pwd1')
+        pwd2 = request.POST.get('pwd2')
+        phone = request.POST.get('phone')
+        balance = request.POST.get('balance')
+
+        if (pwd1 != pwd2):
+            raise Exception
+        
+        record = {
+            "firstname" : firstname,
+            "lastname" : lastname,
+            "username" : username,
+            "email" : email,
+            "pwd1" : pwd1,
+            "pwd2" : pwd2,
+            "phone" : phone,
+            "balance" : balance
+        }
+        
+        users_collection.insert_one(record)
+
+        print(record)
+
+        return redirect(request, 'home')
+        
+    return render(request, 'base/registration.html')
 
 

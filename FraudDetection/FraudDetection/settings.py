@@ -57,8 +57,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR/'templates',
-            # os.path.join(BASE_DIR, 'frontend', 'build')
-            # os.path.join(BASE_DIR, 'fraud', 'build')
+            # os.path.join(BASE_DIR.parent, 'fraud')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,7 +123,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'build', 'static')]
+STATICFILES_DIRS = [
+                    # os.path.join(BASE_DIR.parent, 'fraud'),
+                    BASE_DIR/'static'
+                    ]
 
 
 # STATICFILES_DIRS = [os.path.join(BASE_DIR.parent, 'fraud')]

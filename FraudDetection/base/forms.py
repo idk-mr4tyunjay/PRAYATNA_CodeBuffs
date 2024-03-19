@@ -1,9 +1,14 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
 
-class CustomUserForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
+class CustomUserForm(UserCreationForm):
+    phone = forms.CharField(max_length=10)
 
     class Meta:
         model = CustomUser
-        fields = ['first_name', 'last_name', 'username', 'email', 'phone', 'password']
+        fields = ['first_name', 'last_name', 'username', 'email', 'phone', 'password1', 'password2']
+
+    def __init__(self, *args, **kwargs):
+        super(CustomUserForm, self).__init__(*args, **kwargs)
+        self.fields['phone'].label = "Phone Number"

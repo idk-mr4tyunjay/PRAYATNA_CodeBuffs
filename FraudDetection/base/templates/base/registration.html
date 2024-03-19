@@ -3,9 +3,38 @@
 
 {% block content %}
 
-<form method="POST">
+<form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    <!-- {{ form.as_p }} -->
+
+    <label for="fname">First name : </label>
+    <input type="text" id="fname" name="fname">
+    
+    <label for="uname">Last name : </label>
+    <input type="text" id="lname" name="lname">
+
+    <label for="lname">Username : </label>
+    <input type="text" id="uname" name="username">
+    
+    <label for="email">Email : </label>
+    <input type="email" id="uemail" name="uemail">
+
+    <label for="pwd1">Password</label>
+    <input type="password" id="pwd1" name="pwd1">
+
+    <label for="pwd2">Confirm Password : </label>
+    <input type="pasword" id="pwd2" name="pwd2">
+
+    <label for="phone">Phone no : </label>
+    <input type="text" id="phone" name="phone">
+    
+    <label for="bal">Current Balance : </label>
+    <input type="number" id="number" name="balance">
+
+
     <button type="submit">Register</button>
 </form>
 {% endblock %}
+
+
+
