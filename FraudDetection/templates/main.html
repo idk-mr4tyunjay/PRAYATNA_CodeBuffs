@@ -4,18 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Page</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+          }
+          
+          .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+          }
+          
+          .content {
+            flex: 1;
+          }
+          
+          .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+          }
+          
+    </style>
 </head>
 <body>
-
-    {% block content %}
-        
-    {% endblock %}
-
-    <footer>
-        {% block ftbar %}
+    <div class="wrapper">
+        <div class="content">
+            {% block content %}
             
-        {% endblock %}
-    </footer>
-    
+            {% endblock %}
+        </div>
+        <div class="footer">
+            {% block ftbar %}
+            
+            {% endblock %}
+        </div>
+    </div>
 </body>
+
 </html>
