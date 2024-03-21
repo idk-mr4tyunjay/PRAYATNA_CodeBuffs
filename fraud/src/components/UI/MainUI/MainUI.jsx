@@ -1,12 +1,14 @@
 import Feature from "./Features/Feature"
 import Footer from "../Footer/Footer"
-import Navbar from "./Navbar/Navbar"
+import Navbar from "./Nav/Navbar"
+import Output from "./Features/Output"
 
 function MainUI() {
   return (
     <div className="mainui1">
-    <Navbar />
+    <Navbar/>
     <Feature />
+    <Output/>
     <Footer/>
 
   </div>  )

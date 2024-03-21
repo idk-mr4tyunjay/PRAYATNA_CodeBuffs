@@ -1,0 +1,8 @@
+.out {
+  width: 100vw;
+  height: 100vh;
+  background-color: #afc6f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

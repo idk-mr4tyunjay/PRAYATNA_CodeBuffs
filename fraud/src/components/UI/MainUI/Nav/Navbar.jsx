@@ -1,33 +1,34 @@
 import "./navbar.css";
-
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="main">
       <img src="\src\assets\icons\logoo.png" alt="logo" id="logo" />
       <div className="linkWrapper">
-        <a className="navLinks" href="#">
+        <Link to="/services" className="navLinks" href="#" id="services">
           Services
-        </a>
-        <a className="navLinks" href="#">
-          Data Representation
-        </a>
-        <a className="navLinks" href="#">
-          Past Transactions
-        </a>
+        </Link>
+        <Link to="/factors" className="navLinks" href="#">
+          Factors{" "}
+        </Link>
         <div className="profile-icon">
           <img src="\src\assets\icons\userr.png" alt="user" id="icon" />
 
           <div className="options">
             <ul>
-              <li>Profile</li>
-              <li onClick={handleSettingsClick}>Settings</li>
+              <li>
+                {" "}
+                <Link to="/profile">Profile</Link>
+              </li>
+              <li>
+                <Link to="/Settings">Settings</Link>
+              </li>
               <li>Help</li>
             </ul>
           </div>
         </div>
       </div>
-   
     </div>
   );
 }

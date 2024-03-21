@@ -6,5 +6,5 @@ urlpatterns = [
     path('', views.home, name="home"),
     # path('', views.front, name="front"),
     path('api-code/', views.get_api_code, name='get_api_code'),
-    path('register/', views.register, name="register"),
+    # path('register/', views.register, name="register"),
 ]

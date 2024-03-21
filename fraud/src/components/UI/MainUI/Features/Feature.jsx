@@ -1,28 +1,20 @@
-import { useState } from "react";
 import "./feature.css";
+import Formm from './Formm'
 
 function Feature() {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleActive = () => {
-    setIsActive(!isActive);
-  };
-
   return (
     <div className="mainfeature">
       <div className="feature-page">
-        <h1>Dynamic Feature Page</h1>
-        <div className={`feature-content ${isActive ? "active" : ""}`}>
+        <h1>Check Your Transactions</h1>
+        <div>
           <p>
-            This is a dynamically generated feature page. Click the button to
-            see the content.
+            
           </p>
         </div>
-        <button onClick={toggleActive} className="toggle-button">
-          {isActive ? "Hide Content" : "Show Content"}
-        </button>
       </div>
-      <img src="\src\assets\icons\user-rating-4118325-3414906.png" alt="" />
+      <div className="for"><div className="xs"><img src="\src\assets\icons\user-rating-4118325-3414906.png" alt="" /></div>
+      <div className="xsd"><Formm/></div>
+      </div>
     </div>
   );
 }

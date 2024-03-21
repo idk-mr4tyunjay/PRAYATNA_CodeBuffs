@@ -1,0 +1,32 @@
+/* External CSS styles for the Factor component */
+.factor-container {
+  display: flex;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container {
+  flex: 1; /* Occupy the left part */
+  padding: 20px;
+}
+
+.factor {
+  flex: 1; /* Occupy the right part */
+  padding: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .factor-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .factor,
+  .image-container {
+    flex: none; /* Reset flex to default behavior */
+    width: 100%; /* Set width to 100% */
+  }
+}

@@ -30,3 +30,10 @@
 .toggle-button:hover {
   background-color: #0056b3;
 }
+.for {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.xsd {
+}

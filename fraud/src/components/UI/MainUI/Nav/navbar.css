@@ -28,10 +28,6 @@
   color: white;
 }
 
-.navLinks:hover {
-  background-color: #8d8741;
-}
-
 #logo {
   width: 100px;
   height: 100px;
@@ -86,4 +82,8 @@
 
 .profile-icon:hover .options {
   display: block;
+}
+
+#services {
+  text-decoration: none;
 }

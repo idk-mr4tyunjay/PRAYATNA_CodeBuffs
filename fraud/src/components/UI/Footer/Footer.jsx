@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 function Footer() {
@@ -6,20 +7,22 @@ function Footer() {
     heading: "PRAYATNA",
     columns: [
       {
-        title: "Address",
-        content: "123 Street, City, Country",
+        title: "Shivam Chouhan",
+        content: "Backend",
       },
       {
-        title: "Phone",
-        content: "+1 234 5678",
+        title: "Mruthunjay Pamar",
+        content: "Front-end",
       },
       {
-        title: "Email",
-        content: "info@example.com",
+        title: "Dimple Kundu",
+        content: "ML Model",
       },
+      {
+        title: "Divyanshu Khatri",
+        content: "ML model"
+      }
     ],
-
-    officeLocation: "Office Location: 456 Avenue, City, Country",
   };
 
   return (
@@ -50,6 +53,7 @@ function Footer() {
           alt="twitter-x"
           className="sicons"
         />
+        <Link to="/mainui" >Login</Link>
       </div>
     </footer>
   );

@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect
 import requests
 from rest_framework.response import Response
 from .serializers import ApiCodeSerializer
-from .forms import CustomUserForm
+# from .forms import CustomUserForm
 from rest_framework.decorators import api_view
-from .models import users_collection
+# from .models import users_collection
 
 
 def front(request):
@@ -39,21 +39,21 @@ def get_api_code(request):
     return ApiCodeShow(request)
 
 # Function for validating and registerin the user
-def register_user(request):
-    form = CustomUserForm()
-    if request.method == 'POST':
-        form = CustomUserForm(request.POST)
-        if form.is_valid():            
-            form.save()
-            return redirect('home')
-    else:
-        form = CustomUserForm()
+# def register_user(request):
+#     form = CustomUserForm()
+#     if request.method == 'POST':
+#         form = CustomUserForm(request.POST)
+#         if form.is_valid():            
+#             form.save()
+#             return redirect('home')
+#     else:
+#         form = CustomUserForm()
 
-    context = {
-        'form': form,
-    }
+#     context = {
+#         'form': form,
+#     }
 
-    return render(request, 'base/registration.html', context)
+    # return render(request, 'base/registration.html', context)
 
 
 def register(request):

@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'FraudDetection.wsgi.application'
 
-AUTH_USER_MODEL = 'base.CustomUser'
+# AUTH_USER_MODEL = 'base.CustomUser'
 
 
 # Database

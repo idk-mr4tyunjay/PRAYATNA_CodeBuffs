@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MainUI from "../MainUI/MainUI";
+import { Link } from "react-router-dom";
 import "./login.css";
 
 function Login() {
@@ -42,8 +42,13 @@ function LoginPage({ onLogin }) {
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Username" />
           <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
+          <button type="submit" >
+            <Link to="/mainui" >Login</Link>
+          </button>
         </form>
+        <p>
+          Don't have an account? <Link to="/mainui">Sign up</Link>
+        </p>
       </div>
     </div>
   );
